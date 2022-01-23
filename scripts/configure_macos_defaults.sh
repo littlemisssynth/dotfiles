@@ -45,7 +45,6 @@ defaults write com.apple.finder SidebarSharedSectionDisclosedState -bool true
 echo "Moving dock to left of screen"
 defaults write com.apple.dock orientation left
 
-
 echo "Making the dock smaller..."
 defaults write com.apple.dock tilesize -int 30
 killall Dock

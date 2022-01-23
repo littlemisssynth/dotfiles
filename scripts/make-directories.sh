@@ -11,5 +11,3 @@ mkdir -pv ~/Music
 if [[ ! -f "~/code/dotfiles" ]]; then
     git clone $(git remote show origin | grep 'Fetch URL:' | sed 's/  Fetch URL: //g') ~/code/dotfiles
 fi
-
-
