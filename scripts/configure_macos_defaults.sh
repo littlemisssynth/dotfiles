@@ -1,4 +1,4 @@
-#!/usr/bin/env bash 
+#!/bin/bash
 echo "DS_Store go away!..."
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 

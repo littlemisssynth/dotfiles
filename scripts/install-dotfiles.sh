@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 git submodule update --init --depth 1
 cp -v dotfiles/tmux.conf ~/.tmux.conf
 cp -v dotfiles/Xresources ~/.Xresources

@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 # Make sure dotfiles repo is up to date
 git pull
 

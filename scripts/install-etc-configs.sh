@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 if [[ -f /usr/bin/pacman ]]; then
     echo "Installing pacman configuration..."
     sudo cp -v /etc/pacman.conf /etc/pacman.conf.BACKUP

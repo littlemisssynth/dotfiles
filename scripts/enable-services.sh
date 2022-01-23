@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 if [[ $(uname -s) == "Linux" ]]; then
     if [[ $(file /sbin/init) == "/sbin/init: symbolic link to /lib/systemd/systemd" ]]; then
         echo "Systemd detected"

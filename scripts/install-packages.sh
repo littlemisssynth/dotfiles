@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 echo "Installing packages..."
 if [[ -f /usr/bin/pacman ]]; then
     sudo pacman -Syu --needed $(cat packages/pacman)

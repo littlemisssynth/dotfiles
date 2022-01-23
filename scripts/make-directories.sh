@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 echo "Creating directories in home"
 mkdir -pv ~/code
 mkdir -pv ~/os
