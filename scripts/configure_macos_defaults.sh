@@ -6,7 +6,7 @@ echo "Enabling battery percentage..."
 defaults write com.apple.menuextra.battery ShowPercent -string "YES"
 
 echo "Showing all extensions..."
-defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+defaults write NSGlobalDomain AppleShowAllExtensions -bool false
 
 echo "Setting purple accent color..."
 defaults write NSGlobalDomain AppleAccentColor -integer 5
@@ -46,5 +46,5 @@ echo "Moving dock to left of screen"
 defaults write com.apple.dock orientation left
 
 echo "Making the dock smaller..."
-defaults write com.apple.dock tilesize -int 30
+defaults write com.apple.dock tilesize -int 35
 killall Dock
