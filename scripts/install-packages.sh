@@ -10,6 +10,8 @@ if [[ -f /usr/bin/pacman ]]; then
     popd > /dev/null
     echo "Installing AUR packages..."
     paru --sudoloop -S $(cat packages/aur)
+if [[ -f /usr/bin/apt ]]; then
+    sudo apt install $(cat packages/apt)
 elif [[ $(uname -s) == "Darwin" ]]; then
     echo "Executing macOS script..."
     scripts/install-packages-macos.sh
