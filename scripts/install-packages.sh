@@ -1,5 +1,12 @@
 #!/bin/bash
 echo "Installing packages..."
+flatpak() {
+    if [[ -f /usr/bin/flatpak ]]; then
+            # Add remote repository
+            flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+            flatpak install "$(cat packages/flatpak)"
+    fi
+}
 if [[ -f /usr/bin/pacman ]]; then
     sudo pacman -Syu --needed $(cat packages/pacman)
     mkdir -p ~/code/aur
