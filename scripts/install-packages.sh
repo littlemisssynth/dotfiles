@@ -12,7 +12,7 @@ if [[ -f /usr/bin/pacman ]]; then
     paru --sudoloop -S $(cat packages/aur)
     flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
     flatpak install "$(cat packages/flatpak)"
-if [[ -f /usr/bin/apt ]]; then
+elif [[ -f /usr/bin/apt ]]; then
     sudo apt install $(cat packages/apt)
     flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
     flatpak install "$(cat packages/flatpak)"
