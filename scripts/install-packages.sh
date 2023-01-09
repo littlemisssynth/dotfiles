@@ -1,6 +1,5 @@
 #!/bin/bash
 echo "Installing packages..."
-
 if [[ -f /usr/bin/pacman ]]; then
     sudo pacman -Syu --needed $(cat packages/pacman)
     mkdir -p ~/code/aur
@@ -11,12 +10,12 @@ if [[ -f /usr/bin/pacman ]]; then
     popd > /dev/null
     echo "Installing AUR packages..."
     paru --sudoloop -S $(cat packages/aur)
-            flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-            flatpak install "$(cat packages/flatpak)"
+    flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+    flatpak install "$(cat packages/flatpak)"
 if [[ -f /usr/bin/apt ]]; then
     sudo apt install $(cat packages/apt)
-            flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-            flatpak install "$(cat packages/flatpak)"
+    flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+    flatpak install "$(cat packages/flatpak)"
 elif [[ $(uname -s) == "Darwin" ]]; then
     echo "Executing macOS script..."
     scripts/install-packages-macos.sh
