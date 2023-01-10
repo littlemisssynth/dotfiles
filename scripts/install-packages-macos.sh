@@ -12,5 +12,5 @@ else
     echo "Homebrew already installed, skipping..."
 fi
 
-brew install "$(cat packages/homebrew)"
-brew install --cask "$(cat packages/homebrew-cask)"
+brew install $(cat packages/homebrew)
+brew install --cask $(cat packages/homebrew-cask)
