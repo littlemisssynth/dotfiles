@@ -11,11 +11,11 @@ if [[ -f /usr/bin/pacman ]]; then
     echo "Installing AUR packages..."
     paru --sudoloop -S $(cat packages/aur)
     flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-    flatpak install "$(cat packages/flatpak)"
+    flatpak install $(cat packages/flatpak)
 elif [[ -f /usr/bin/apt ]]; then
     sudo apt install $(cat packages/apt)
     flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-    flatpak install "$(cat packages/flatpak)"
+    flatpak install $(cat packages/flatpak)
 elif [[ $(uname -s) == "Darwin" ]]; then
     echo "Executing macOS script..."
     scripts/install-packages-macos.sh
