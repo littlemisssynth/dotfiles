@@ -1,4 +1,9 @@
 firefox-esr
+software-properties-common
+apt-transport-https
+dirmngr
+ca-certificates
+curl
 neofetch
 flatpak
 git
