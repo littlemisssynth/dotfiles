@@ -14,6 +14,3 @@ $ ./install.sh
 
 $ scripts/install-dotfiles.sh
 
-## steam needs the following for the use of library on external drives
-
-flatpak override --user --filesystem=/path/to/your/Steam/Library com.valvesoftware.Steam
